@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>ai-hands API</title>
+  <style>
+    body { font-family: monospace; background: #0d1117; color: #c9d1d9; max-width: 640px; margin: 60px auto; padding: 0 20px; }
+    h1 { color: #58a6ff; } h2 { color: #8b949e; font-size: 1rem; margin-top: 2rem; }
+    code { background: #161b22; padding: 2px 6px; border-radius: 4px; color: #79c0ff; }
+    .ep { margin: 8px 0; } .badge { color: #3fb950; }
+  </style>
+</head>
+<body>
+  <h1>ai-hands API</h1>
+  <p>A secure REST API for news and weather. All endpoints require a <code>Server-API-Key</code> header.</p>
+
+  <h2>Endpoints</h2>
+  <div class="ep"><span class="badge">GET</span> <code>/</code> — This page (public)</div>
+  <div class="ep"><span class="badge">GET</span> <code>/news/{topic}</code> — Top news for a topic</div>
+  <div class="ep"><span class="badge">GET</span> <code>/weather/{city}</code> — Current weather for a city</div>
+
+  <h2>Authentication</h2>
+  <p>Add the key to every request header:</p>
+  <pre><code>Server-API-Key: your-secret-key</code></pre>
+
+  <h2>Example</h2>
+  <pre><code>curl -H "Server-API-Key: your-key" http://localhost:8000/weather/London</code></pre>
+</body>
+</html>
